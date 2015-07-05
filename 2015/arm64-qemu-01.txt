@@ -1,0 +1,36 @@
+原文地址: http://blogs.coreboot.org/blog/2015/06/03/gsoc-coreboot-for-arm64-qemu-week-1/
+作者: Naman
+翻译: mytbk
+
+作为对ARM64 qemu引入coreboot目标的开始，第一周我要完成的是搭建一个qemu AArch64环境。在这个post中，我要谈的是构建qemu,然后引导一个能让我们开始对这个架构进行实验的内核。
+
+要开始构建qemu,我们需要一些包:
+pkg-config, libfdt-dev
+
+然后，我们需要支持AArch64的qemu,所以我安装了qemu 2.3.0. 你也可以:
+sudo apt-get install build-dep demu
+
+因为我是在一台Mac上构建，我要做一个brew install qemu(v2.3.0).对于Mac,推荐使用真正的gcc,而不是已有的链接到llvm-gcc(x86_64-apple-darwin13.4.0/4.9.2)的'gcc'.用原有的gcc一直让我很难受，所以我下了gcc 4.9.2,建立了一个手工链接并用它做我的构建工作。接下来，我们需要一些源码 ：
+git clone git://git.qemu.org/qemu.git qemu.git
+cd qemu.git
+./configure --target-list=aarch64-softmmu
+
+最后一个命令通常会返回一个错误，说DTC(libfdt)不存在。这个问题出在qemu尝试在qemu/dtc搜索dtc二进制文件。就算你用sudo apt-get install device-tree-compiler安装了dtc,我们还是会得到这样的错误。所以，可能你需要做的是把二进制文件放到qemu/dtc.在源码库中这样做就行了:
+git submodule update --init dtc
+
+然后，重新./configure,输出见http://pastebin.com/rg70p9eX.我们然后要运行make.
+
+输出见http://pastebin.com/59sFXyEs.成功的构建之后，我们在qemu.git/aarch64-softmmu有了./qemu-system-aarch64可执行文件。然后我用一个预先构建好的结合了initrd和基本rootfs的内核镜像，可以在http://www.megafileupload.com/Mlb/aarch64-linux-3.15rc2-buildroot.img下载。
+
+最后，我们在生成的AArch64系统运行这个内核，找到了Linux的引导序列，最终得到了登陆提示符。
+qemu-system-aarch64 -machine virt -cpu cortex-a57 -machine type=virt -nographic -smp 1 -m 2048 -kernel ~/Downloads/aarch64-linux-3.15rc2-buildroot.img  --append "console=ttyAMA0"
+
+引导序列http://pastebin.com/mT3SdKSw最终得到Welcome to Buildroot
+buildroot login: root
+# ls
+# uname -a 
+Linux buildroot 3.15.0-rc2ajb-00069-g1aae31c #39 SMP Thu Apr 24 11:48:57 BST 2014 aarch64 GNU/Linux
+
+这给了我们一个运行Linux的AArch64 qemu环境，在这上面我们可以开始构建coreboot.
+
+在这个开发平台准备好之后，我开始我的实际工作——构建qemu arm64的coreboot.这个星期，我看(现在已经废弃的)foundation-armv8 patchset并开始我的开发。第一个任务将会是创建一个我要用的合适的媒介结构/功能。

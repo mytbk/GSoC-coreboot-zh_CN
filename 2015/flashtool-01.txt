@@ -1,0 +1,14 @@
+原文地址: http://blogs.coreboot.org/blog/2015/06/01/gsoc-end-user-flash-tool/
+作者: dmitro
+翻译: mytbk
+
+在第一周，我大多数工作都在完成一部分图形界面。我准备了一个包含非常基本的元素和特性的描述的演示(https://www.dropbox.com/s/akd0h3dy8dbens8/gsoc_end_user_flashtool.pdf).我会感谢你们的反馈，因为它不是最终的形式。
+
+这个界面足够便利，还是需要修改？是否有flashrom或者cbfs_tool的重要特性/选项少做了？你们有任何建议吗？
+
+我同时也在开始做libflashrom,patch set在一段时间之前Nico Huber做好了(http://patchwork.coreboot.org/patch/3809/).代码有一点过时了，大多数的功能现在也不work.我做了一些修改，现在我可以用fl_set_log_callback()重定向flashrom的输出到GUI.我完成了用于返回支持的变成器列表的fl_supported_programmers()函数。任何对libflashrom的建议都非常欢迎！现在，我会按照http://flashrom.org/Libflashrom来做。
+
+这星期的计划：
+1. 继续完成/改善GUI
+2. 对GUI部分写单元测试
+3. 通过修正扩展libflashrom的patch,学习flashrom的代码
