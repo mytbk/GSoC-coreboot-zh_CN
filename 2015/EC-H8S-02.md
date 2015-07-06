@@ -19,8 +19,8 @@
 
 这个决定不好做，特别是因为大多数的事情我都没做过。这卡了我一段时间，直到Peter帮助了我，他把一个针脚往上弯了。谢谢！
 
-下周的里程碑还是刷新EC,自从上星期同样的目标。所以时间安排会有点混乱。可能我可以尽快并快于一周达到另一个周计划。
+下周的里程碑还是刷新EC——自从上星期以来同样的目标。所以时间安排会有点混乱。可能我可以尽快并快于一周达到另一个周计划。
 
-因为我有点卡在那上面，我又看了下ebay并买了一个有H8S/2633的开发板。2633比联想笔记本用的2199系列新一些。这个开发板应该会在一周内到(but atm it's in german customs).这样的开发板很难在一个好价上拿到。全新的板子几百欧元或美金起，比如调试器E10(USB设备)要大约1000欧元，它还只是个傻傻的USB设备。我已经在ebay上买了个E8,上一代的调试器，但是它不能调试这芯片，只有用瑞萨的软件/IDE刷写它们。
+因为我有点卡在那上面，我又看了下ebay并买了一个有H8S/2633的开发板。2633比联想笔记本用的2199系列新一些。这个开发板应该会在一周内到(but atm it's in german customs).这样的开发板很难在一个好价上拿到。全新的板子几百欧元或美金起，比如调试器E10(USB设备)要大约1000欧元，它还只是个傻傻的USB设备。我已经在ebay上买了个E8,上一代的调试器，但是它不能调试这芯片，只有用瑞萨(Renesas)的软件/IDE刷写它们。
 
-除了我的项目之外，我做了一些其他coreboot的工作。我帮助Holger Levsen[reproducible.debian.net](https://reproducible.debian.net/coreboot/coreboot.html)在创建了一个可重现的构建工作。更多关于可重现构建在他们的[wiki](https://wiki.debian.org/ReproducibleBuilds)上。为了改善可重现性，我创建了两个patch[#10448](http://review.coreboot.org/#/c/10448/)[#10449](http://review.coreboot.org/#/c/10449/).它们在没构建payload的情况下清理了coreboot的可重现bug,现在大多数的目标已经可重现。为Holger Levsen的这些工作表示非常的感谢！
+除了我的项目之外，我做了一些其他coreboot的工作。我帮助Holger Levsen在[reproducible.debian.net](https://reproducible.debian.net/coreboot/coreboot.html)创建了一个可重现的构建工作。更多关于可重现构建在他们的[wiki](https://wiki.debian.org/ReproducibleBuilds)上。为了改善可重现性，我创建了两个patch[#10448](http://review.coreboot.org/#/c/10448/)[#10449](http://review.coreboot.org/#/c/10449/).它们在没构建payload的情况下清理了coreboot的可重现bug,现在大多数的目标已经可重现。为Holger Levsen的这些工作表示非常的感谢！
