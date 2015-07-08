@@ -1,6 +1,6 @@
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 
-[原文](http://blogs.coreboot.org/blog/2015/06/03/gsoc-coreboot-for-arm64-qemu-week-1/)
+[原文](http://blogs.coreboot.org/blog/2015/06/03/gsoc-coreboot-for-arm64-qemu-week-1/)  
 作者: Naman  
 翻译: mytbk  
 
