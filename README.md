@@ -11,4 +11,4 @@ GSoC coreboot项目博文的翻译
 
 ## coreboot for ARM64 QEMU
 * [Week #1](2015/arm64-qemu-01.txt)
-* [Week #2]()
+* [Week #2](2015/arm64-qemu-02.md)
