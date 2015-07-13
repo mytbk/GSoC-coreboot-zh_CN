@@ -30,7 +30,7 @@ $MAKE install DESTDIR=$DESTDIR || touch .failed
 随后，一些对ARMv8做的架构的决定要做了。在初始的版本中，我一直指望`media.c`中基于`cbfs_media`的结构，用于创建读，写，映射的功能。但老的形式(在`cbfs_core.c`和`cbfs_core.h`里)已经变了。为了跟进，和一致的维护，我们决定像在ARMv7一样处理它，也就是说，建立一个映射到QEMU内存映射空间。现在已经像ARMv7一样带起来了。这在未来可能会改变。同时，UART的组织已经完成了。`plo11.c`被包含，像在`src/drivers/uart/Makefile.inc`一样，通过在ARMv8 Kconfig里面设置`DRIVERS_UART_PL011`.
 
 下一个故障是处理SMP.在我的计划里，我已经提出，合并SMP进模拟会是一个长期的目标。但因为SMP是ARM64核心逻辑的一部分，在这阶段不能完全忽视。我遇到了这个：
-> coreboot/src/arch/arm64/stage_entry.S:94: undefined reference to `smp_processor_id’
-> build/arch/arm64/c_entry.romstage.o: In function `seed_stack':
+> coreboot/src/arch/arm64/stage_entry.S:94: undefined reference to \`smp_processor_id’  
+build/arch/arm64/c_entry.romstage.o: In function \`seed_stack':
 
 这时，需要一个添加了`smp_processor_id()`的CPU文件，我现在正在做这个。下周的计划是通过这些(并且接触新的无法预料的问题)并在QEMU中引导起来。
