@@ -1,6 +1,9 @@
 # GSoC-coreboot-zh_CN
 GSoC coreboot项目博文的翻译
 
+## coreboot相关新闻
+* [coreboot 4.1](news/coreboot-4.1.md)
+
 ## EC/H8S firmware
 * [Week #1](2015/EC-H8S-01.txt)
 * [Week #2](2015/EC-H8S-02.md)
