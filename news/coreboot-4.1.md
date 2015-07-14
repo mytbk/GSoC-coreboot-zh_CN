@@ -1,6 +1,7 @@
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 
 原文地址: [http://www.coreboot.org/pipermail/coreboot/2015-July/080120.html](http://www.coreboot.org/pipermail/coreboot/2015-July/080120.html)  
+作者: [Patrick Georgi](mailto:pgeorgi@google.com)  
 翻译: mytbk
 
 亲爱的coreboot社区,
