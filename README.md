@@ -9,6 +9,7 @@ GSoC coreboot项目博文的翻译
 * [Week #2](2015/EC-H8S-02.md)
 * [Week #3|4](2015/EC-H8S-03-04.md)
 * [Week #5](2015/EC-H8S-05.md)
+* [Week #6](2015/EC-H8S-06.md)
 
 ## End user flash tool
 * [Week #1](2015/flashtool-01.txt)
