@@ -10,16 +10,19 @@
 
 在调试和梳理更多问题之后，我最终让它成功地构建了。
 
-> coreboot.rom: 4096 kB, bootblocksize 37008, romsize 4194304, offset 0x90c0 alignment: 64 bytes, architecture: arm64
-> Name                            Offset     Type         Size
-> fallback/romstage               0x90c0     stage        12108
-> fallback/ramstage               0xc080     stage        17768
-> config                          0x10640    raw          2034
-> revision                        0x10e80    raw          577
-> (empty)                         0x11100    null         4124312
-> HOSTCC     cbfstool/rmodtool.o
-> HOSTCC     cbfstool/rmodule.o
-> HOSTCC     cbfstool/rmodtool (link)
+> 
+```
+coreboot.rom: 4096 kB, bootblocksize 37008, romsize 4194304, offset 0x90c0 alignment: 64 bytes, architecture: arm64
+Name                            Offset     Type         Size
+fallback/romstage               0x90c0     stage        12108
+fallback/ramstage               0xc080     stage        17768
+config                          0x10640    raw          2034
+revision                        0x10e80    raw          577
+(empty)                         0x11100    null         4124312
+HOSTCC     cbfstool/rmodtool.o
+HOSTCC     cbfstool/rmodule.o
+HOSTCC     cbfstool/rmodtool (link)
+```
 
 完整的构建可以看[这里](http://pastebin.com/qFzBXYGL).我在这之后尝试在QEMU上引导。
 ```
