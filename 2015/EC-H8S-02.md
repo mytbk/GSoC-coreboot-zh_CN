@@ -6,7 +6,7 @@
 
 上星期有点沉闷。我做了些重焊接(resoldering).针脚P90没有和需要用来进入闪存引导模式(flash boot mode)的3.3V连接。它被焊接到串行电位切换器(serial level shifter)MAX3243的VCC上。在用万用表搜索一个更好的电源几分钟后，我决定用H8S附近的3.3V.现在是一个穿过板子的非常长的电线。
 
-现在看看，这工作得多好呢？什么都没有:(.用电压表(voltmeter)重新检查一下，发现P91(/SUS\_STAT)的另外一个问题。当用一个1k电感(resistor)连接SUS\_STAT和3.3V的时候，电压表显示0.04V.这表明它被别的东西驱动到0V.我的希望是芯片直到上电(powered)都不驱动它。但是它正驱动它到0V.SUS\_STAT是什么？SUS\_STAT可以被用作LPCPD(LPC power down)并用来通知设备进入一个低功率状态。挂起状态(Suspend Status)是低电位触发(active low)的，意味着所有的设备都应该在低功率模式。
+现在看看，这工作得多好呢？什么都没有:(.用电压表(voltmeter)重新检查一下，发现P91(/SUS\_STAT)的另外一个问题。当用一个1k电阻(resistor)连接SUS\_STAT和3.3V的时候，电压表显示0.04V.这表明它被别的东西驱动到0V.我的希望是芯片直到上电(powered)都不驱动它。但是它正驱动它到0V.SUS\_STAT是什么？SUS\_STAT可以被用作LPCPD(LPC power down)并用来通知设备进入一个低功率状态。挂起状态(Suspend Status)是低电位触发(active low)的，意味着所有的设备都应该在低功率模式。
 
 我现在应该做什么？我需要那条线上有3.3V.
 
