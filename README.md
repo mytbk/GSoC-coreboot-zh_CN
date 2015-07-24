@@ -5,7 +5,7 @@ GSoC coreboot项目博文的翻译
 * [coreboot 4.1](news/coreboot-4.1.md)
 
 ## EC/H8S firmware
-* [Week #1](2015/EC-H8S-01.txt)
+* [Week #1](2015/EC-H8S-01.md)
 * [Week #2](2015/EC-H8S-02.md)
 * [Week #3|4](2015/EC-H8S-03-04.md)
 * [Week #5](2015/EC-H8S-05.md)
