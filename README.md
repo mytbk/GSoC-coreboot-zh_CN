@@ -10,6 +10,7 @@ GSoC coreboot项目博文的翻译
 * [Week #3|4](2015/EC-H8S-03-04.md)
 * [Week #5](2015/EC-H8S-05.md)
 * [Week #6](2015/EC-H8S-06.md)
+* [Week #7|8](2015/EC-H8S-07-08.md)
 
 ## End user flash tool
 * [Week #1](2015/flashtool-01.txt)
@@ -24,6 +25,7 @@ GSoC coreboot项目博文的翻译
 * [Week #3](2015/arm64-qemu-03.md)
 * [Week #4|5](2015/arm64-qemu-04-05.md)
 * [Week #6](2015/arm64-qemu-06.md)
+* [Week #7](2015/arm64-qemu-07.md)
 
 ## 其他文章
 * [Thinking about Logging](http://blogs.coreboot.org/blog/2015/06/19/gsoc-thinking-about-logging/)
