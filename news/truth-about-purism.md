@@ -4,7 +4,7 @@
 作者: [Alexandru Gagniuc](http://blogs.coreboot.org/blog/author/mrnuke/)  
 翻译: mytbk
 
-# Purism的真相: 在(coreboot)的幕后
+# Purism的真相: 在(coreboot)幕后
 
 从[上次](http://blogs.coreboot.org/blog/2015/02/23/the-truth-about-purism-why-librem-is-not-the-same-as-libre/)我谈到Purism在coreboot笔记本的刺痛后，发生了很多事情，包括非自由的Librem 15的发行，同时有13寸版本的计划。我上篇文章好像在这主题上闪现出了好些争议，把我放在了很多不是很开心的支持者和Todd Weaver之间的邮件的CC域上。我已经避免在这个主题上再写文章了，因为我说不出关于Purism的任何好话。然而，考虑到近来新邮件的数量，我想我应该跟进为什么Librem 15在自由的前沿失败，以及为什么另一台Purism笔记本同样很可能会失败。
 
