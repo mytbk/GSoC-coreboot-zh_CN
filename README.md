@@ -3,6 +3,7 @@ GSoC coreboot项目博文的翻译
 
 ## coreboot相关新闻
 * [coreboot 4.1](news/coreboot-4.1.md)
+* [The truth about Purism: Behind the (coreboot) scenes](news/truth-about-purism.md)
 
 ## EC/H8S firmware
 * [Week #1](2015/EC-H8S-01.md)
