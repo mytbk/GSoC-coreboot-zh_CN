@@ -23,7 +23,7 @@
 > 我们让coreboot在几周之内发行的第一版运行起来后，就会发布源码。
 
 ### Librem 15启动了
-时间快进一个月，在邮件交换消失了之后，我获得了一个信息，Librem 15已经搭载了AMI的UEFI固件。尽管我没有Librem 15，[PC World确认了这个消息](http://www.pcworld.com/article/2960524/laptop-computers/why-linux-enthusiasts-are-arguing-over-purisms-sleek-idealistic-librem-laptops.html).虽然我讨厌就这样结束了，我还是喜欢说这个：[我已经告诉过你了](http://blogs.coreboot.org/blog/2015/02/23/the-truth-about-purism-why-librem-is-not-the-same-as-libre/).
+时间快进一个月，在邮件交换消失了之后，我获得了一个信息，Librem 15已经搭载了AMI的UEFI固件。尽管我没有Librem 15，[PC World确认了这个消息](http://www.pcworld.com/article/2960524/laptop-computers/why-linux-enthusiasts-are-arguing-over-purisms-sleek-idealistic-librem-laptops.html)。虽然我讨厌就这样结束了，我还是喜欢说这个：[我已经告诉过你了](http://blogs.coreboot.org/blog/2015/02/23/the-truth-about-purism-why-librem-is-not-the-same-as-libre/)。
 
 ### Todd声明他有在Librem上工作的coreboot开发者
 一波新的愤怒的邮件最近跟着来。我又一次有机会和Todd直接交流。他声明有三位coreboot开发者为Purism工作，但他们要保持匿名。然而，他提供了一位开发者的名字，出于隐私我就不提了。当然了，我很好奇那个人做了什么：
@@ -35,12 +35,12 @@
 [coreboot]$
 ```
 
-我告诉Todd这个开发者不是coreboot贡献者，而为了我们的交谈，不能算作是一个coreboot“开发者”。我要求Todd产生另外两人中一个或两个人贡献的patch的git哈，他没有按我的要求做。
+我告诉Todd这个开发者不是coreboot贡献者，而为了我们的交谈，不能算作是一个coreboot“开发者”。我要求Todd产生另外两人中一个或两个人贡献的patch的git哈希，他没有按我的要求做。
 
 ## Purism攻击Minifree(以前的Gluglug)
 ![](http://i0.wp.com/blogs.coreboot.org/files/2015/08/purism_attacks_minifree.png?resize=300%2C230)
 
-就在这个早上，一则[推特](https://twitter.com/Puri_sm/status/629787848246341632)引起了我的注意，对我来说，它就像一个从Purism到Minifree的直接攻击。这个推拿“又老又重IBM ThinkPad”和Librem 15相比，展示了一张跑libreboot的T60的图片。这也是Gluglug(现在的Minifree)在他们销售T60型号用在它的产品页面的一张图片。
+就在这个早上，一则推特引起了我的注意，对我来说，它就像一个从Purism到Minifree的直接攻击。这个推拿“又老又重IBM ThinkPad”和Librem 15相比，展示了一张跑libreboot的T60的图片。这也是Gluglug(现在的Minifree)在他们销售T60型号用在它的产品页面的一张图片。
 
 告诉不知情的你们，Minifree(以前的Gluglug)出售，上自OS下到固件，完全自由的笔记本系统，而且通过FSF的Respects Your Freedom认证，获得FSF的支持。这些Minifree笔记本是我们，作为社区，自从超过15年前的LinuxBIOS的诞生，一直致力于工作而得到的成果，也是我不管所有的困难和障碍，卡在这个项目超过5年的原因。攻击Minifree，是侮辱我们这些年来艰难的工作。而对我来说，象征着Purism并没有真正给你们带来一点自由，但他们真的喜欢你们的支持和金钱。
 
