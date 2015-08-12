@@ -27,6 +27,7 @@ GSoC coreboot项目博文的翻译
 * [Week #4|5](2015/arm64-qemu-04-05.md)
 * [Week #6](2015/arm64-qemu-06.md)
 * [Week #7](2015/arm64-qemu-07.md)
+* [Week #8](2015/arm64-qemu-08.md)
 
 ## 其他文章
 * [Thinking about Logging](http://blogs.coreboot.org/blog/2015/06/19/gsoc-thinking-about-logging/)
