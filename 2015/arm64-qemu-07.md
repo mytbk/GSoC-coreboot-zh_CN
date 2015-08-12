@@ -1,8 +1,8 @@
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 
-[原文](http://blogs.coreboot.org/blog/2015/07/28/gsoc-coreboot-for-arm64-qemu-week-7/)
-作者: Naman
-翻译: mytbk
+[原文](http://blogs.coreboot.org/blog/2015/07/28/gsoc-coreboot-for-arm64-qemu-week-7/)  
+作者: Naman  
+翻译: mytbk  
 
 这是艰难的一周。在通过了coreboot的构建阶段后，我想我的工作应该会简单一些了。但我又遇到另一件事。
 
