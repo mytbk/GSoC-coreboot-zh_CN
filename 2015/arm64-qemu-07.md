@@ -6,14 +6,12 @@
 
 这是艰难的一周。在通过了coreboot的构建阶段后，我想我的工作应该会简单一些了。但我又遇到另一件事。
 
-就像我在上篇文章说的那样，我在QEMU引导的时候没有得到任何输出。所以，第一件事是要让QEMU的monitor工作。在一些调试后，我能让QEMU的monitor工作，在我的终端(stdio)上打印东西。
+就像我在上篇文章说的那样，我在QEMU引导的时候没有得到任何输出。所以，第一件事是要让QEMU的monitor工作。在一些调试后，我能让QEMU的monitor工作，并在我的终端(stdio)上打印东西了。
 
 这给了我以下信息：
+> qemu: fatal: Trying to execute code outside RAM or ROM at 0x0000000008000000
 >
-```
-qemu: fatal: Trying to execute code outside RAM or ROM at 0x0000000008000000
-
-R00=00000950 R01=ffffffff R02=44000000 R03=00000000
+> R00=00000950 R01=ffffffff R02=44000000 R03=00000000
 R04=00000000 R05=00000000 R06=00000000 R07=00000000
 R08=00000000 R09=00000000 R10=00000000 R11=00000000
 R12=00000000 R13=00000000 R14=40010010 R15=08000000
@@ -39,7 +37,6 @@ s34=00000000 s35=00000000 d17=0000000000000000
 s36=00000000 s37=00000000 d18=0000000000000000
 s38=00000000 s39=00000000 d19=0000000000000000
 s40=000000 Abort trap: 6
-```
 
 我做了些搜索，这表示引导加载器(bootloader)无法加载。并意识到可能QEMU正在被分配的ROM不够。`execute outside RAM or ROM`通常是一个到某个地方的跳转，QEMU没法识别这个位置是ROM/RAM.
 
@@ -51,7 +48,6 @@ s40=000000 Abort trap: 6
 也就是说，ROM从64K开始。所以我通过给一个`-m 2048M`(用于测试)来运行QEMU,克服了这个致命的QEMU错误，但依然没法让coreboot引导起来(在串口上没有输出).这表明，需要更多的调试。
 
 我开始用gdb调试。我在QEMU引导上创建了一个gdb stub(通过使用-s -S),但是运行gdb连接时，gdb给我这些信息：
->
 ```
 (gdb) target remote localhost:1234
 Remote debugging using localhost:1234
