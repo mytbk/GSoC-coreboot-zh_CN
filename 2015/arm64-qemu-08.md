@@ -49,45 +49,42 @@ Type "apropos word" to search for commands related to "word".
 ```
 
 我收到的一些调试信息是这些:
->
-```
-(gdb) target remote :1234
-
-Remote debugging using :1234
-
-0x0000000000000200 in ?? ()
-
-(gdb) run
-
-The “remote” target does not support “run”.  Try “help target” or “continue”.
-
-(gdb) continue
-
-Continuing.
-
-^C
-
-Program received signal SIGINT, Interrupt.
-
-0x0000000000000200 in ?? ()
-```
+> ```
+> (gdb) target remote :1234
+> 
+> Remote debugging using :1234
+> 
+> 0x0000000000000200 in ?? ()
+> 
+> (gdb) run
+> 
+> The “remote” target does not support “run”.  Try “help target” or “continue”.
+> 
+> (gdb) continue
+> 
+> Continuing.
+> 
+> ^C
+> 
+> Program received signal SIGINT, Interrupt.
+> 
+> 0x0000000000000200 in ?? ()
+> ```
 
 在尝试在gdb单步执行的时候，我收到了:
->
-```
-(gdb) step
-
-Cannot find bounds of current function
-```
+> ```
+> (gdb) step
+> 
+> Cannot find bounds of current function
+> ```
 
 像这样的错误通常在我们溢出了一个缓冲区或者搞坏了栈的时候看到，合适的返回地址被破坏了。当调试器尝试给出地址在哪个函数内的时候，它失败了，因为地址不在程序的任何一个函数里面。
 
 在gdb里运行where(where现实当前行和函数，以及带你到那个位置的调用栈)的时候我得到:
->
-```
-(gdb) where
-
-#0  0x0000000000000200 in ?? ()
-```
+> ```
+> (gdb) where
+> 
+> #0  0x0000000000000200 in ?? ()
+> ```
 
 在使用gdb的信息还原一下源码之后，从gdb我们看到了一些在`src/arch/arm64/stage_entry.S`文件中`stage_entry`函数的问题。我会重置那些东西并继续调试。
