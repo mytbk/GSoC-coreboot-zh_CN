@@ -19,6 +19,9 @@ GSoC coreboot项目博文的翻译
 * [Week #3](2015/flashtool-03.md)
 * [Week #4|5](2015/flashtool-04-05.md)
 * [Week #6](2015/flashtool-06.md)
+* [Week #7|8|9](2015/flashtool-07-08-09.md)
+* [Week #10|11|12](2015/flashtool-10-11-12.md)
+* [Week #13](2015/flashtool-13.md)
 
 ## coreboot for ARM64 QEMU
 * [Week #1](2015/arm64-qemu-01.txt)
