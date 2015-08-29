@@ -1,4 +1,4 @@
-[原文](http://blogs.coreboot.org/blog/2015/08/16/gsoc-end-user-flash-tool-week-10-1112/)
+[原文](http://blogs.coreboot.org/blog/2015/08/16/gsoc-end-user-flash-tool-week-10-1112/)  
 作者: dmitro  
 翻译: mytbk  
 
@@ -20,7 +20,7 @@
 
 ![刷写界面](http://i1.wp.com/blogs.coreboot.org/files/2015/08/flash_tool_auto_tab.png)
 
-自动化镜像构建的过程:
+自动化镜像构建的过程:  
 1. 检查对系统可工作的配置是否已知  
 2. 检查配置是否需要额外的option ROM  
 3. 如果需要，添加从原厂BIOS提取或者从运行中系统的内存提取的option ROM  
